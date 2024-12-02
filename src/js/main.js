@@ -1,20 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Мобильное меню
-    const menuToggle = document.querySelector('.menu-toggle');
     const sidebar = document.querySelector('.sidebar');
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
-    document.body.appendChild(overlay);
+    const menuToggle = document.querySelector('.header__btn');
 
     function toggleMenu() {
         sidebar.classList.toggle('sidebar--open');
-        menuToggle.classList.toggle('menu-toggle--active');
-        overlay.classList.toggle('overlay--visible');
+        menuToggle.classList.toggle('header__btn--active');
         document.body.style.overflow = sidebar.classList.contains('sidebar--open') ? 'hidden' : '';
     }
 
     menuToggle?.addEventListener('click', toggleMenu);
-    overlay?.addEventListener('click', toggleMenu);
 
     // Анимация появления элементов
     const fadeElements = document.querySelectorAll('.fade-in');

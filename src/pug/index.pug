@@ -75,14 +75,18 @@ block content
         .logo
           img.logo__icon(src="images/icons/logo.svg" alt="Dashboard")
           p.logo__text Dashboard <span class="logo__version">v.01</span> 
-      
       nav.menu
         ul.menu__list
-          each item in [{name: 'Dashboard',icon: 'key-square'}, {name: 'Product',icon: '3d-square'}, {name: 'Customers',active: true,icon: 'user-square'}, {name: 'Income',icon: 'wallet-money'}, {name: 'Promote',icon: 'discount-shape'}, {name: 'Help',icon: 'message-question'}]
+          each item in [{name: 'Dashboard',icon: 'key-square', arrow: false}, {name: 'Product',icon: '3d-square', arrow: true}, {name: 'Customers',active: true,icon: 'user-square', arrow: true}, {name: 'Income',icon: 'wallet-money', arrow: true}, {name: 'Promote',icon: 'discount-shape', arrow: true}, {name: 'Help',icon: 'message-question', arrow: true  }]
             li.menu__item(class=item.active ? 'menu__item--active' : '')
               a.menu__link(href="#")
                 img.menu__icon(src=`images/icons/${item.icon.toLowerCase()}.svg` alt="")
                 span.menu__text= item.name
+                if item.arrow
+                  if item.active
+                    img.menu__arrow(src="images/icons/chevron-right-white.svg" alt="arrow")
+                  else
+                    img.menu__arrow(src="images/icons/chevron-right.svg" alt="arrow")
 
       .user
         img.user__avatar(src="images/avatar.svg" alt="")
@@ -93,6 +97,9 @@ block content
     main.main
       header.header
         h1.header__title Hello Evano 👋
+        button.header__btn(onclick="toggleMenu()")
+          img.header__icon.header__icon--menu(src="images/icons/menu.svg" alt="Меню")
+          img.header__icon.header__icon--close(src="images/icons/close.svg" alt="Закрыть")
       
       section.customers
         .customers__header

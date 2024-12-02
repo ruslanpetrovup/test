@@ -39,6 +39,7 @@
               <a href="#" class="menu__link">
                 <img src="images/product-icon.svg" alt="" class="menu__icon" />
                 <span class="menu__text">Product</span>
+                <img src="images/icons/chevron-right.svg" alt="" class="menu__arrow">
               </a>
             </li>
             <li class="menu__item menu__item--active">
@@ -49,24 +50,28 @@
                   class="menu__icon"
                 />
                 <span class="menu__text">Customers</span>
+                <img src="images/icons/chevron-right.svg" alt="" class="menu__arrow">
               </a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
                 <img src="images/income-icon.svg" alt="" class="menu__icon" />
                 <span class="menu__text">Income</span>
+                <img src="images/icons/chevron-right.svg" alt="" class="menu__arrow">
               </a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
                 <img src="images/promote-icon.svg" alt="" class="menu__icon" />
                 <span class="menu__text">Promote</span>
+                <img src="images/icons/chevron-right.svg" alt="" class="menu__arrow">
               </a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
                 <img src="images/help-icon.svg" alt="" class="menu__icon" />
                 <span class="menu__text">Help</span>
+                <img src="images/icons/chevron-right.svg" alt="" class="menu__arrow">
               </a>
             </li>
           </ul>
@@ -85,6 +90,10 @@
       <main class="main">
         <header class="header">
           <h1 class="header__title">Hello Evano 👋</h1>
+          <button class="header__btn" onclick="toggleMenu()">
+            <img src="images/icons/menu.svg" alt="Меню" class="header__icon header__icon--menu">
+            <img src="images/icons/close.svg" alt="Закрыть" class="header__icon header__icon--close">
+          </button>
         </header>
 
         <section class="customers">
@@ -143,12 +152,6 @@
       </main>
     </div>
 
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <span class="menu-toggle__line"></span>
-      <span class="menu-toggle__line"></span>
-      <span class="menu-toggle__line"></span>
-    </button>
-
-    <script src="js/main.js"></script>
+    <script src="src/js/main.js"></script>
   </body>
 </html>
