@@ -7,10 +7,6 @@ node_modules/
 package-lock.json
 yarn.lock
 
-# Собранные файлы
-dist/
-build/
-
 # IDE и редакторы
 .idea/
 .vscode/

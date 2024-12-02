@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="dashboard fade-in">
+      <aside class="sidebar"><a class="sidebar__header" href="#">
+          <div class="logo"><img class="logo__icon" src="images/icons/logo.svg" alt="Dashboard">
+            <p class="logo__text">Dashboard <span class="logo__version">v.01</span> </p>
+          </div></a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="#"><img class="menu__icon" src="images/icons/key-square.svg" alt=""><span class="menu__text">Dashboard</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="#"><img class="menu__icon" src="images/icons/3d-square.svg" alt=""><span class="menu__text">Product</span><img class="menu__arrow" src="images/icons/chevron-right.svg" alt="arrow"></a></li>
+            <li class="menu__item menu__item--active"><a class="menu__link" href="#"><img class="menu__icon" src="images/icons/user-square.svg" alt=""><span class="menu__text">Customers</span><img class="menu__arrow" src="images/icons/chevron-right-white.svg" alt="arrow"></a></li>
+            <li class="menu__item"><a class="menu__link" href="#"><img class="menu__icon" src="images/icons/wallet-money.svg" alt=""><span class="menu__text">Income</span><img class="menu__arrow" src="images/icons/chevron-right.svg" alt="arrow"></a></li>
+            <li class="menu__item"><a class="menu__link" href="#"><img class="menu__icon" src="images/icons/discount-shape.svg" alt=""><span class="menu__text">Promote</span><img class="menu__arrow" src="images/icons/chevron-right.svg" alt="arrow"></a></li>
+            <li class="menu__item"><a class="menu__link" href="#"><img class="menu__icon" src="images/icons/message-question.svg" alt=""><span class="menu__text">Help</span><img class="menu__arrow" src="images/icons/chevron-right.svg" alt="arrow"></a></li>
+          </ul>
+        </nav>
+        <div class="user"><img class="user__avatar" src="images/avatar.svg" alt="">
+          <div class="user__info">
+            <div class="user__name">Evano</div>
+            <div class="user__position">Project Manager</div>
+          </div>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="header">
+          <h1 class="header__title">Hello Evano 👋</h1>
+          <button class="header__btn" onclick="toggleMenu()"><img class="header__icon header__icon--menu" src="images/icons/menu.svg" alt="Меню"><img class="header__icon header__icon--close" src="images/icons/close.svg" alt="Закрыть"></button>
+        </header>
+        <section class="customers">
+          <div class="customers__header">
+            <div class="customers__title-wrap">
+              <h2 class="customers__title">All Customers</h2>
+              <p class="customers__subtitle">Active Members</p>
+            </div>
+            <div class="search">
+              <input class="search__input" type="text" placeholder="Search"><img class="search__icon" src="images/icons/search.svg" alt="">
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Company</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Country</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__row fade-in">
+                  <td>Jane Cooper</td>
+                  <td>Microsoft</td>
+                  <td>(225) 555-0118</td>
+                  <td>jane@microsoft.com</td>
+                  <td>United States</td>
+                  <td>
+                    <p class="badge badge--active">Active</p>
+                  </td>
+                </tr>
+                <tr class="table__row fade-in">
+                  <td>Floyd Miles</td>
+                  <td>Yahoo</td>
+                  <td>(205) 555-0100</td>
+                  <td>floyd@yahoo.com</td>
+                  <td>Kiribati</td>
+                  <td>
+                    <p class="badge badge--inactive">Inactive</p>
+                  </td>
+                </tr>
+                <tr class="table__row fade-in">
+                  <td>Ronald Richards</td>
+                  <td>Adobe</td>
+                  <td>(302) 555-0107</td>
+                  <td>ronald@adobe.com</td>
+                  <td>Israel</td>
+                  <td>
+                    <p class="badge badge--inactive">Inactive</p>
+                  </td>
+                </tr>
+                <tr class="table__row fade-in">
+                  <td>Marvin McKinney</td>
+                  <td>Tesla</td>
+                  <td>(252) 555-0126</td>
+                  <td>marvin@tesla.com</td>
+                  <td>Iran</td>
+                  <td>
+                    <p class="badge badge--active">Active</p>
+                  </td>
+                </tr>
+                <tr class="table__row fade-in">
+                  <td>Jerome Bell</td>
+                  <td>Google</td>
+                  <td>(629) 555-0129</td>
+                  <td>jerome@google.com</td>
+                  <td>Réunion</td>
+                  <td>
+                    <p class="badge badge--active">Active</p>
+                  </td>
+                </tr>
+                <tr class="table__row fade-in">
+                  <td>Kathryn Murphy</td>
+                  <td>Microsoft</td>
+                  <td>(406) 555-0120</td>
+                  <td>kathryn@microsoft.com</td>
+                  <td>Curaçao</td>
+                  <td>
+                    <p class="badge badge--active">Active</p>
+                  </td>
+                </tr>
+                <tr class="table__row fade-in">
+                  <td>Jacob Jones</td>
+                  <td>Yahoo</td>
+                  <td>(208) 555-0112</td>
+                  <td>jacob@yahoo.com</td>
+                  <td>Brazil</td>
+                  <td>
+                    <p class="badge badge--active">Active</p>
+                  </td>
+                </tr>
+                <tr class="table__row fade-in">
+                  <td>Kristin Watson</td>
+                  <td>Facebook</td>
+                  <td>(704) 555-0127</td>
+                  <td>kristin@facebook.com</td>
+                  <td>Åland Islands</td>
+                  <td>
+                    <p class="badge badge--inactive">Inactive</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination-wrapper">
+            <p class="pagination-wrapper__text">Showing data 1 to 8 of  256K entries</p>
+            <div class="pagination">
+              <button class="pagination__prev"><</button>
+              <div class="pagination__pages"><span class="pagination__page pagination__page--active">1</span><span class="pagination__page">2</span><span class="pagination__page">3</span><span class="pagination__page">4</span><span class="pagination__dots">...</span><span class="pagination__page">40</span>
+              </div>
+              <button class="pagination__next">></button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
