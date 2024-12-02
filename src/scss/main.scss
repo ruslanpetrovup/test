@@ -1,0 +1,52 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'components' as *;
+
+// Базовые стили
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+// Основные стили
+.dashboard {
+  display: grid;
+  grid-template-columns: 306px 1fr;
+  min-height: 100vh;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main {
+  padding: 50px;
+  
+  @include mobile {
+    padding: 20px;
+  }
+}
+
+.header {
+  &__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+}

@@ -1,0 +1,24 @@
+// Цвета
+$primary-color: #5932EA;
+$bg-color: #FAFBFF;
+$text-color: #292D32;
+$text-secondary: #B5B7C0;
+$sidebar-text-color: #B5B7C0;
+$border-color: #EEEEEE;
+$active-color: #16C098;
+$inactive-color: #DF0404;
+
+// Размеры
+$sidebar-width: 306px;
+$border-radius-lg: 30px;
+$border-radius-md: 10px;
+$border-radius-sm: 8px;
+
+// Брейкпоинты
+$mobile: 768px;
+$tablet: 1024px;
+
+:export {
+  mobile: $mobile;
+  tablet: $tablet;
+}

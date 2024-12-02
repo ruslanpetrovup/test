@@ -1,0 +1,32 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.search {
+    position: relative;
+    width: 216px;
+  
+    @include mobile {
+      width: 100%;
+    }
+  
+    &__input {
+      width: 100%;
+      padding: 10px 40px 10px 40px;
+      background: #F9FBFF;
+      border: none;
+      border-radius: $border-radius-md;
+      
+      &::placeholder {
+        color: $text-secondary;
+        font-family: 'Poppins', sans-serif;
+      }
+    }
+  
+    &__icon {
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }

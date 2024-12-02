@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Боковое меню -->
+      <aside class="sidebar">
+        <div class="sidebar__header">
+          <a class="logo">
+            <img
+              src="images/icons/logo.svg"
+              alt="Dashboard"
+              class="logo__icon"
+            />
+            <p class="logo__text">
+              Dashboard<span class="logo__version">v.01</span>
+            </p>
+          </a>
+        </div>
+
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img
+                  src="images/dashboard-icon.svg"
+                  alt=""
+                  class="menu__icon"
+                />
+                <span class="menu__text">Dashboard</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="images/product-icon.svg" alt="" class="menu__icon" />
+                <span class="menu__text">Product</span>
+              </a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a href="#" class="menu__link">
+                <img
+                  src="images/customers-icon.svg"
+                  alt=""
+                  class="menu__icon"
+                />
+                <span class="menu__text">Customers</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="images/income-icon.svg" alt="" class="menu__icon" />
+                <span class="menu__text">Income</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="images/promote-icon.svg" alt="" class="menu__icon" />
+                <span class="menu__text">Promote</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <img src="images/help-icon.svg" alt="" class="menu__icon" />
+                <span class="menu__text">Help</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="user">
+          <img src="images/avatar.svg" alt="" class="user__avatar" />
+          <div class="user__info">
+            <div class="user__name">Evano</div>
+            <div class="user__position">Project Manager</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="main">
+        <header class="header">
+          <h1 class="header__title">Hello Evano 👋</h1>
+        </header>
+
+        <section class="customers">
+          <div class="customers__header">
+            <div class="customers__title-group">
+              <h2 class="customers__title">All Customers</h2>
+              <p class="customers__subtitle">Active Members</p>
+            </div>
+            <div class="search">
+              <img src="images/icons/search.svg" alt="" class="search__icon" />
+              <input type="text" class="search__input" placeholder="Search" />
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="table">
+              <thead class="table__head">
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Company</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Country</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody class="table__body">
+                <tr class="table__row">
+                  <td>Jane Cooper</td>
+                  <td>Microsoft</td>
+                  <td>(225) 555-0118</td>
+                  <td>jane@microsoft.com</td>
+                  <td>United States</td>
+                  <td><span class="badge badge--active">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination-wrapper">
+            <p class="pagination-wrapper__text">Showing data 1 to 8 of  256K entries</p>
+            <div class="pagination">
+              <button class="pagination__btn pagination__btn--prev"><</button>
+              <div class="pagination__pages">
+                <span class="pagination__page pagination__page--active">1</span>
+                <span class="pagination__page">2</span>
+                <span class="pagination__page">3</span>
+                <span class="pagination__page">4</span>
+                <span class="pagination__dots">...</span>
+                <span class="pagination__page">40</span>
+              </div>
+              <button class="pagination__btn pagination__btn--next">></button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span class="menu-toggle__line"></span>
+      <span class="menu-toggle__line"></span>
+      <span class="menu-toggle__line"></span>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

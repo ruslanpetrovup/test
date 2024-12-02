@@ -1,0 +1,137 @@
+extends layouts/default
+
+block content
+  - 
+    const customers = [
+      {
+        name: 'Jane Cooper',
+        company: 'Microsoft',
+        phone: '(225) 555-0118',
+        email: 'jane@microsoft.com',
+        country: 'United States',
+        status: 'Active',
+      },
+      {
+        name: 'Floyd Miles',
+        company: 'Yahoo',
+        phone: '(205) 555-0100',
+        email: 'floyd@yahoo.com',
+        country: 'Kiribati',
+        status: 'Inactive',
+      },
+      {
+        name: 'Ronald Richards',
+        company: 'Adobe',
+        phone: '(302) 555-0107',
+        email: 'ronald@adobe.com',
+        country: 'Israel',
+        status: 'Inactive',
+      },
+      {
+        name: 'Marvin McKinney',
+        company: 'Tesla',
+        phone: '(252) 555-0126',
+        email: 'marvin@tesla.com',
+        country: 'Iran',
+        status: 'Active',
+      },
+      {
+        name: 'Jerome Bell',
+        company: 'Google',
+        phone: '(629) 555-0129',
+        email: 'jerome@google.com',
+        country: 'Réunion',
+        status: 'Active',
+      },
+      {
+        name: 'Kathryn Murphy',
+        company: 'Microsoft',
+        phone: '(406) 555-0120',
+        email: 'kathryn@microsoft.com',
+        country: 'Curaçao',
+        status: 'Active',
+      },
+      {
+        name: 'Jacob Jones',
+        company: 'Yahoo',
+        phone: '(208) 555-0112',
+        email: 'jacob@yahoo.com',
+        country: 'Brazil',
+        status: 'Active'
+      },
+      {
+        name: 'Kristin Watson',
+        company: 'Facebook',
+        phone: '(704) 555-0127',
+        email: 'kristin@facebook.com',
+        country: 'Åland Islands',
+        status: 'Inactive'
+      }
+    ]
+
+  .dashboard.fade-in
+    aside.sidebar
+      a.sidebar__header(href="#")
+        .logo
+          img.logo__icon(src="images/icons/logo.svg" alt="Dashboard")
+          p.logo__text Dashboard <span class="logo__version">v.01</span> 
+      
+      nav.menu
+        ul.menu__list
+          each item in [{name: 'Dashboard',icon: 'key-square'}, {name: 'Product',icon: '3d-square'}, {name: 'Customers',active: true,icon: 'user-square'}, {name: 'Income',icon: 'wallet-money'}, {name: 'Promote',icon: 'discount-shape'}, {name: 'Help',icon: 'message-question'}]
+            li.menu__item(class=item.active ? 'menu__item--active' : '')
+              a.menu__link(href="#")
+                img.menu__icon(src=`images/icons/${item.icon.toLowerCase()}.svg` alt="")
+                span.menu__text= item.name
+
+      .user
+        img.user__avatar(src="images/avatar.svg" alt="")
+        .user__info
+          .user__name Evano
+          .user__position Project Manager
+
+    main.main
+      header.header
+        h1.header__title Hello Evano 👋
+      
+      section.customers
+        .customers__header
+          .customers__title-wrap
+            h2.customers__title All Customers
+            p.customers__subtitle Active Members
+          
+          .search
+            input.search__input(type="text" placeholder="Search")
+            img.search__icon(src="images/icons/search.svg" alt="")
+
+        .table-wrapper
+          table.table
+            thead
+              tr
+                th Customer Name
+                th Company
+                th Phone Number
+                th Email
+                th Country
+                th Status
+            tbody
+              each customer in customers
+                tr.table__row.fade-in
+                  td= customer.name
+                  td= customer.company
+                  td= customer.phone
+                  td= customer.email
+                  td= customer.country
+                  td
+                    p.badge(class=customer.status === 'Active' ? 'badge--active' : 'badge--inactive')= customer.status
+
+        .pagination-wrapper
+          p.pagination-wrapper__text Showing data 1 to 8 of  256K entries
+          .pagination
+            button.pagination__prev <
+            .pagination__pages
+              - for(let i = 1; i <= 4; i++)
+                span.pagination__page(class=i === 1 ? 'pagination__page--active' : '')= i
+              span.pagination__dots ...
+              span.pagination__page 40
+            button.pagination__next >

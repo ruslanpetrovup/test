@@ -1,0 +1,123 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.table-wrapper {
+  background: #fff;
+  border-radius: $border-radius-lg;
+  padding: 30px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__head {
+    border-bottom: 1px solid $border-color;
+  }
+
+  th {
+    text-align: left;
+    padding: 14px 20px;
+    color: $text-secondary;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  td {
+    padding: 20px;
+    border-bottom: 1px solid $border-color;
+    font-size: 14px;
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  tr {
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #f9fbff;
+    }
+  }
+}
+
+.badge {
+  width: 80px;
+  height: 29px;
+  padding: 4px 12px;
+  border-radius: $border-radius-sm;
+  font-size: 14px;
+  text-align: center;
+
+  &--active {
+    background: rgba($active-color, 0.38);
+    color: $active-color;
+    border: 2px solid $active-color;
+  }
+
+  &--inactive {
+    background: #ffc5c5;
+    color: $inactive-color;
+    border: 2px solid $inactive-color;
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+
+  &-wrapper {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__text {
+      font-size: 14px;
+      font-weight: 500;
+      color: $text-secondary;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__page {
+    width: 25px;
+    height: 24px;
+    background: #F5F5F5;
+    color: #404B52;
+    border-radius: 4px;
+    border: 1px solid #EEEEEE;
+    @include flex-center;
+    cursor: pointer;
+
+    &--active {
+      background: $primary-color;
+      border: 1px solid transparent;
+      color: #fff;
+      border-radius: 4px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    width: 26px;
+    height: 24px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-sm;
+    @include flex-center;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: $primary-color;
+      color: #fff;
+    }
+  }
+}
